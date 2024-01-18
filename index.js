@@ -47,7 +47,7 @@ getNewFactBtn.addEventListener("click", getNewFact)
 
 const postAPost = async(text) => {
     try {
-        const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+        const response = await fetch('https://jsonplaceholder.typicode.com/comments', {
             method: 'POST',
             body: JSON.stringify({
                 body: text,
