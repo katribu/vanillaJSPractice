@@ -1,0 +1,61 @@
+body, html {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 60%;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 300;
+}
+
+h1 {
+    font-family: 'Kanit', sans-serif;
+    font-weight: 700;
+    margin-top: 0;
+}
+
+.body-container {
+    display: flex;
+    flex-direction: column;
+    background: rgb(33, 33, 78);
+    color: white;
+    padding: 0 20px;
+}
+
+.fact-div {
+    background: rgb(69, 69, 175);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.comments-div {
+    background: rgb(109, 109, 170);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.comm-para {
+    width: 50%;
+}
+
+.post-div {
+    background: rgb(142, 142, 175);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+/* Button Styling */
+button {
+    font-family: 'Kanit', sans-serif;
+    border: none;
+    padding: 1em;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 1em;
+}
+
+button:hover, button:active {
+    background: rgb(33, 33, 78);
+    color: white;
+    cursor: pointer; 
+}
