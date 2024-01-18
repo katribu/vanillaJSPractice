@@ -2,6 +2,8 @@ const randomFactText = document.getElementById("random-fact")
 const getNewFactBtn = document.getElementById("new-fact-btn")
 const postBtn = document.getElementById("post-btn")
 const comments = document.getElementById("comments")
+const inputText = document.getElementById("input-field")
+const postText = document.getElementById("post-text")
 
 fetch(`https://uselessfacts.jsph.pl/api/v2/facts/today`)
     .then(res => res.json())
@@ -41,9 +43,32 @@ const getComments = async() => {
 getComments()
 getNewFactBtn.addEventListener("click", getNewFact)
 
-const handlePostClick = () => {
-    console.log("Yaay")
+
+
+const postAPost = async(text) => {
+    try {
+        const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+            method: 'POST',
+            body: JSON.stringify({
+                body: text,
+            }),
+            headers: {
+                'Content-type': 'application/json',
+            },
+        })
+
+        const post = await response.json();
+        console.log(post);
+        
+    }catch(error){
+        console.log(error.message);
+    }
 }
 
-postBtn.addEventListener("click",handlePostClick)
+postBtn.addEventListener("click", () => {
+    const text = inputText.value;
+    postText.innerHTML = inputText.value;
+    postAPost(text);
+})
+
 
